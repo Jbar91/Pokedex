@@ -1,3 +1,4 @@
+/*font style*/
 @font-face {
   font-family: "PokemonGB";
   src: url("../fonts/PokemonGB.woff") format("woff"), url("../fonts/PokemonGB.woff2") format("woff2");
@@ -5,6 +6,7 @@
   font-style: normal;
 }
 
+/*main containers*/
 body {
   height: 100%;
   display: -webkit-box;
@@ -43,64 +45,6 @@ body {
   width: 100%;
 }
 
-#main-logo {
-  position: absolute;
-  top: -50px;
-  width: 580px;
-  height: 300px;
-  -webkit-animation-name: appear;
-          animation-name: appear;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-}
-
-@-webkit-keyframes appear {
-  from {
-    width: 0%;
-  }
-  to {
-    margin-right: 100%;
-  }
-}
-
-@keyframes appear {
-  from {
-    width: 0%;
-  }
-  to {
-    margin-right: 100%;
-  }
-}
-
-#pokeball {
-  position: absolute;
-  top: 165px;
-  width: 65px;
-  height: 65px;
-  -webkit-animation-name: slidein;
-          animation-name: slidein;
-  -webkit-animation-duration: 2.8s;
-          animation-duration: 2.8s;
-}
-
-@-webkit-keyframes slidein {
-  from {
-    margin-left: -60%;
-  }
-  to {
-    margin-left: 0%;
-  }
-}
-
-@keyframes slidein {
-  from {
-    margin-left: -60%;
-  }
-  to {
-    margin-left: 0%;
-  }
-}
-
 #pokemon-display {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -133,12 +77,27 @@ body {
   margin: 20px 20px;
 }
 
-.card:hover {
-  cursor: pointer;
-  -webkit-transform: translateY(-15px);
-          transform: translateY(-15px);
-  -webkit-box-shadow: 8px 8px 3px 1px rgba(0, 0, 0, 0.5);
-          box-shadow: 8px 8px 3px 1px rgba(0, 0, 0, 0.5);
+/*images*/
+#main-logo {
+  position: absolute;
+  top: -50px;
+  width: 580px;
+  height: 300px;
+  -webkit-animation-name: appear;
+          animation-name: appear;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+#pokeball {
+  position: absolute;
+  top: 165px;
+  width: 65px;
+  height: 65px;
+  -webkit-animation-name: slidein;
+          animation-name: slidein;
+  -webkit-animation-duration: 2.8s;
+          animation-duration: 2.8s;
 }
 
 .sprite {
@@ -147,6 +106,51 @@ body {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
+/*animations*/
+@-webkit-keyframes appear {
+  from {
+    width: 0%;
+  }
+  to {
+    margin-right: 100%;
+  }
+}
+@keyframes appear {
+  from {
+    width: 0%;
+  }
+  to {
+    margin-right: 100%;
+  }
+}
+
+@-webkit-keyframes slidein {
+  from {
+    margin-left: -60%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+
+@keyframes slidein {
+  from {
+    margin-left: -60%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+
+.card:hover {
+  cursor: pointer;
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
+  -webkit-box-shadow: 8px 8px 3px 1px rgba(0, 0, 0, 0.5);
+          box-shadow: 8px 8px 3px 1px rgba(0, 0, 0, 0.5);
+}
+
+/*text styles*/
 .name {
   margin-left: 8px;
   margin-bottom: 5px;
@@ -181,6 +185,7 @@ body {
   font-style: bold;
 }
 
+/*specific colors by type*/
 .pokemon-type-normal {
   background-color: #545757;
   border: 0.2px solid black;
@@ -325,6 +330,7 @@ body {
   width: 90px;
 }
 
+/*responsive queries*/
 @media (max-width: 810px) {
   body {
     width: 100vw;
